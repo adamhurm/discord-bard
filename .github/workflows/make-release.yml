@@ -67,9 +67,9 @@ jobs:
           artifacts: "*.jar"
           body: |
             ${{ github.event.inputs.info }}
-            
+            ### Docker Image
+            https://hub.docker.com/r/adamhurm/discord-bard/tags
             ---
             ### Setup
             https://jmusicbot.com/setup  
             https://jmusicbot.com/config  
-            # Download: [JMusicBot-${{ github.event.inputs.version_number }}.jar](https://github.com/jagrosh/MusicBot/releases/download/${{ github.event.inputs.version_number }}/JMusicBot-${{ github.event.inputs.version_number }}.jar)
