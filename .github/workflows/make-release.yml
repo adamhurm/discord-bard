@@ -69,7 +69,9 @@ jobs:
             ${{ github.event.inputs.info }}
             ### Docker Image
             https://hub.docker.com/r/adamhurm/discord-bard/tags
+            
             ---
+            
             ### Setup
             https://jmusicbot.com/setup  
             https://jmusicbot.com/config  
