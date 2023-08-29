@@ -14,6 +14,12 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
 
+      - name: Get JMusicBot .jar file
+        uses: robin-raju/release-downloader@efa4cd07bd0195e6cc65e9e30c251b49ce4d3e51
+        with:
+          fileName: JMusicBot-*.jar
+          out-file-path: "."
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
