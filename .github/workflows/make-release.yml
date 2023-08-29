@@ -29,6 +29,11 @@ jobs:
         with:
           files: 'pom.xml'
           replacements: 'Snapshot=${{ github.event.inputs.version_number }}'
+      - name: Replace config.txt references with environmental variables
+        run: >
+          sed -i -e 's/config.getString("token")/System.getenv("BARD_API_TOKEN")/'
+          -e 's/config.getLong("owner")/Long.parseLong(System.getenv("BARD_OWNER_ID"))/'
+          src/main/java/com/jagrosh/jmusicbot/BotConfig.java
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
       - name: Rename jar
