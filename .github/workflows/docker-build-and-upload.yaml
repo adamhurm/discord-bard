@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Get JMusicBot .jar file
-        uses: robin-raju/release-downloader@efa4cd07bd0195e6cc65e9e30c251b49ce4d3e51
+        uses: robinraju/release-downloader@efa4cd07bd0195e6cc65e9e30c251b49ce4d3e51
         with:
           fileName: JMusicBot-*.jar
           out-file-path: "."
