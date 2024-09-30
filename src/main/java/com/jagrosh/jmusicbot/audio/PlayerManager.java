@@ -65,7 +65,7 @@ public class PlayerManager extends DefaultAudioPlayerManager
             String token = null;
             try
             {
-                token = Files.readString(OtherUtil.getPath("youtubetoken.txt"));
+                token = System.getenv("YT_API_TOKEN");//Files.readString(OtherUtil.getPath("youtubetoken.txt"));
             }
             catch (NoSuchFileException e) 
             {

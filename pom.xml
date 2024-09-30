@@ -7,6 +7,11 @@
     <packaging>jar</packaging>
 
     <repositories>
+	    <repository>
+            <id>chew</id>
+            <name>m2-chew</name>
+            <url>https://m2.chew.pro/releases</url>
+        </repository>
         <repository>
             <id>dv8tion</id>
             <name>m2-dv8tion</name>
@@ -40,16 +45,17 @@
     <dependencies>
         <!-- Discord Dependencies -->
         <dependency>
-            <groupId>net.dv8tion</groupId>
-            <artifactId>JDA</artifactId>
-            <version>4.4.1_353</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jagrosh</groupId>
-            <artifactId>jda-utilities</artifactId>
-            <version>3.0.5</version>
+            <groupId>pw.chew</groupId>
+            <artifactId>jda-chewtils</artifactId>
+            <version>1.24.1</version>
+            <scope>compile</scope>
             <type>pom</type>
         </dependency>
+        <dependency>
+             <groupId>net.dv8tion</groupId>
+             <artifactId>JDA</artifactId>
+             <version>4.4.1_353</version>
+         </dependency>
 
         <!-- Music Dependencies -->
         <dependency>
